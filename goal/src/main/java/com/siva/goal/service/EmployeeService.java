@@ -36,6 +36,7 @@ public class EmployeeService {
     }
 
     public List<Employee> findByName(String name) {
-        return employeeRepository.findByName(name);
+        String names[] = name.split(" ");
+        return employeeRepository.findByName(names);
     }
 }

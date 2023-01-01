@@ -24,6 +24,7 @@ import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.siva.goal.model.Address;
 import com.siva.goal.model.BankAccount;
 import com.siva.goal.model.Contact;
@@ -71,6 +72,7 @@ public class Employee {
 
         private String desigination;
 
+        @JsonFormat(pattern = "yyyy-MM-dd")
         private LocalDate dateOfBirth;
 
         @Transient

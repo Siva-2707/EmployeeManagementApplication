@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import com.siva.goal.model.Employee.Employee;
 
 public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
-    @Query(value = "select * from employee where FIRST_NAME LIKE ?1% || LAST_NAME LIKE ?1%", nativeQuery = true)
-    public List<Employee> findByName(String name);
+    @Query(value = "select * from employee where FIRST_NAME  IN (?1) OR LAST_NAME  IN (?1)", nativeQuery = true)
+    public List<Employee> findByName(String[] names);
 
 }
