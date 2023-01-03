@@ -30,8 +30,8 @@ public class EmployeeRepositoryTest {
         employee.setEmail("b.siva@gmail.com");
         employeeRepository.save(employee);
         //when
-        boolean doesfirstNameExist = employeeRepository.findByName("Siva").isEmpty();
-        boolean doesLastNameExist = employeeRepository.findByName("Rajesh").isEmpty();
+        boolean doesfirstNameExist = employeeRepository.findByName(new String[] { "Siva" }).isEmpty();
+        boolean doesLastNameExist = employeeRepository.findByName(new String[] { "Rajesh" }).isEmpty();
         //then
         assertEquals(true, doesfirstNameExist);
         assertEquals(true, doesLastNameExist);
@@ -40,7 +40,7 @@ public class EmployeeRepositoryTest {
     @Test
     void searchFilterShouldNotWork() {
         //given
-        String firstName = "Siva";
+        String[] firstName = { "Siva" };
         //when
         boolean firstNamedoesNotExist = employeeRepository.findByName(firstName).isEmpty();
         //then
