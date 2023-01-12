@@ -1,13 +1,8 @@
 package com.siva.goal.model;
 
-import javax.persistence.Embeddable;
+import lombok.Data;
 
-import lombok.Getter;
-import lombok.Setter;
-
-@Embeddable
-@Getter
-@Setter
+@Data
 public class Address {
 
     private String street;

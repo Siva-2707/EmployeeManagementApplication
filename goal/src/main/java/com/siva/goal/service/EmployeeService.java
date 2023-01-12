@@ -11,7 +11,7 @@ import com.siva.goal.repository.EmployeeRepository;
 @Service
 public class EmployeeService {
 
-    private final EmployeeRepository employeeRepository;
+    private EmployeeRepository employeeRepository;
 
     @Autowired
     public EmployeeService(EmployeeRepository employeeRepository) {
@@ -35,8 +35,8 @@ public class EmployeeService {
         employeeRepository.deleteById(id);
     }
 
-    public List<Employee> findByName(String name) {
-        String names[] = name.split(" ");
-        return employeeRepository.findByName(names);
-    }
+    // public List<Employee> findByName(String name) {
+    //     String names[] = name.split(" ");
+    //     return employeeRepository.findByName(names);
+    // }
 }

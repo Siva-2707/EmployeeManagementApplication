@@ -2,8 +2,10 @@ package com.siva.goal;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.siva.goal.repository")
+@ComponentScan("com.siva.goal")
 public class GoalApplication {
 
 	// private final EmployeeService employeeService;

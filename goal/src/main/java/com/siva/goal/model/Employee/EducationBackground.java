@@ -1,26 +1,10 @@
 package com.siva.goal.model.Employee;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
 
-@Entity
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
-@ToString
 public class EducationBackground {
-    @Id
-    @SequenceGenerator(name = "eduBgrnd_seq_generator", initialValue = 1, allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private int id;
+
     private String courseName;
     private String institute;
     private String university;

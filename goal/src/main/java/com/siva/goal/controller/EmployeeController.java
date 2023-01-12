@@ -60,11 +60,11 @@ public class EmployeeController {
     }
 
     // Searching a employee whith his name
-    @GetMapping("/search")
-    public String searchEmployee(@RequestParam(name = "name") String name, Model model) {
-        model.addAttribute("employees", employeeService.findByName(name));
-        return "employees";
-    }
+    // @GetMapping("/search")
+    // public String searchEmployee(@RequestParam(name = "name") String name, Model model) {
+    //     model.addAttribute("employees", employeeService.findByName(name));
+    //     return "employees";
+    // }
 
     // Updating a employee
     // @PatchMapping("/update")

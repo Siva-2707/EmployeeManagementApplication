@@ -1,29 +1,14 @@
 package com.siva.goal.model.Family;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
 import com.siva.goal.model.Contact;
 import com.siva.goal.model.Enum.Gender;
 import com.siva.goal.model.Enum.Relationship;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.Data;
 
-@NoArgsConstructor
-@Getter
-@Setter
-@AllArgsConstructor
-@Entity
+@Data
 public class Member {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
     private Relationship relationship;
     private String name;
     private Gender gender;

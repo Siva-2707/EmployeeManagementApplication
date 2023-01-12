@@ -1,0 +1,14 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Spring Boot-GoalApplication<goal>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.siva.goal.GoalApplication",
+      "projectName": "goal",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}

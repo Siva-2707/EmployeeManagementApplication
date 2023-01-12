@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.siva.goal.model.Employee.Employee;
@@ -40,9 +39,9 @@ public class EmployeeRestController {
         employeeService.createEmployee(employee);
     }
 
-    @GetMapping(path = "employee/find")
-    public List<Employee> findEmployeeWithName(@RequestParam(name = "name") String name) {
-        return employeeService.findByName(name);
-    }
+    // @GetMapping(path = "employee/find")
+    // public List<Employee> findEmployeeWithName(@RequestParam(name = "name") String name) {
+    //     return employeeService.findByName(name);
+    // }
 
 }

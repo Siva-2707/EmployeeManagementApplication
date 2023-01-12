@@ -1,17 +1,8 @@
 package com.siva.goal.model;
 
-import javax.persistence.Embeddable;
+import lombok.Data;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-
-@Embeddable
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
+@Data
 public class Contact {
     private String type;
     private String contact;

@@ -1,13 +1,8 @@
 package com.siva.goal.repository;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-
-import com.siva.goal.model.Employee.Employee;
 
 @DataJpaTest
 public class EmployeeRepositoryTest {
@@ -19,7 +14,7 @@ public class EmployeeRepositoryTest {
     void tearDown() {
         employeeRepository.deleteAll();
     }
-
+    /*
     @Test
     void searchFilterShouldWork() {
         //given
@@ -36,7 +31,7 @@ public class EmployeeRepositoryTest {
         assertEquals(true, doesfirstNameExist);
         assertEquals(true, doesLastNameExist);
     }
-
+    
     @Test
     void searchFilterShouldNotWork() {
         //given
@@ -46,4 +41,6 @@ public class EmployeeRepositoryTest {
         //then
         assertEquals(true, firstNamedoesNotExist);
     }
+    
+    */
 }
