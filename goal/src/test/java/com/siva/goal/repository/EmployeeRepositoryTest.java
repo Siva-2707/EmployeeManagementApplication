@@ -30,8 +30,8 @@ public class EmployeeRepositoryTest {
         employee.setEmail("b.siva@gmail.com");
         employeeRepository.save(employee);
         //when
-        boolean doesfirstNameExist = employeeRepository.findByName(new String[] { "Siva" }).isEmpty();
-        boolean doesLastNameExist = employeeRepository.findByName(new String[] { "Rajesh" }).isEmpty();
+        boolean doesfirstNameExist = employeeRepository.findByName(new String[] { "Siva" }).size() > 0;
+        boolean doesLastNameExist = employeeRepository.findByName(new String[] { "Rajesh" }).size() > 0;
         //then
         assertEquals(true, doesfirstNameExist);
         assertEquals(true, doesLastNameExist);
